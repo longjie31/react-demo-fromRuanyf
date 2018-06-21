@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>react学习2</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script type="text/babel">
+    var names = ['小龙','小王','小刘','小李'];
+    ReactDOM.render(
+        <div>
+            {
+                names.map(function(name,index){
+                    return <div key = {index}>你好吗，{name}</div>
+                })
+            }
+        </div>,
+        document.getElementById('container')
+    )
+</script>
+</html>
